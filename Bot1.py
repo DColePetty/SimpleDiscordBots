@@ -14,6 +14,8 @@ class MyClient(discord.Client):
 
         if message.content.startswith('!hello'):
             await message.channel.send('Hello {0.author.mention}'.format(message))
+        if message.content.startswith('!help'):
+            await message.channel.send('try !help, !hello, woot!'.format(message))
         if message.content.startswith('I'):
             await message.channel.send('-f'.format(message))
         if message.content.startswith('woot'):
